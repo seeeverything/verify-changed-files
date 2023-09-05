@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1.15
   test:
@@ -28,7 +28,7 @@ jobs:
         platform: [ubuntu-latest, windows-latest, macos-latest, macos-11, ubuntu-18.04, windows-2022]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Test files has no changes an no warning with autocrlf
         uses: ./
         id: changed_files_not_expected_autocrlf
